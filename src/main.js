@@ -94,7 +94,7 @@ function analyzeSalesData(data, options) {
             const product = productIndex[item.sku];
 
             const cost = product.purchase_price * item.quantity;
-            const revenue = calculateSimpleRevenue(item, product);
+            const revenue = calculateRevenue(item, product);
             const profit = revenue - cost;
             seller.profit += profit;
 
